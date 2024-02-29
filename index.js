@@ -189,6 +189,17 @@ const playFromHand1 = (position) => {
                     }
 
                     table.table.cards = [];
+                    if (currentPlayer == "player1") {
+                        modal.style.display = "flex";
+                            setTimeout(() => {
+                                player.play(table, playFromDeck, playFromHand1);
+                                    if (currentPlayer == "player2") {
+                                        modal.style.display = "none";
+                                }
+    
+                            }, 1000);  
+                }
+                    
                 } else {
                     // shapes are not the same
                     table.table.cards.push(card);
