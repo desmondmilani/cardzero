@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.des-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #221144;
+    color: #88aaff;
+    font-family: tahoma;
+}
+
+.des-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.des-box0 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    border: 2px solid black;
+}
+
+.des-box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    border: 2px solid black;
+    font-size: 0.5em;
+}
+
+.player {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    border: 2px solid black;
+}
+
+.table {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.table-card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+img {
+    width: 50px;
+    height: 100px;
+    margin: auto;
+    border: 4px solid white;
+    border-radius: 10px;
+    gap: 5px;
+    transition: border 2s ease-in-out;
+    
+}
+
+img:hover {
+    border: 4px solid green;
+    cursor: pointer;
+    width: 60px;
+    height: 120px;
+}
+
+.playerh {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.modal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    color: blue;
+}
