@@ -58,11 +58,12 @@ DesTag.addToParent(lblName, nameDiv);
 // add text box for name
 let txtName = DesTag.createTag("input");
 txtName.value = user.name;
+txtName.style.width = "150px";
 DesTag.addToParent(txtName, nameDiv);
 
 // add button to change name
 let btnChangeName = DesTag.createTag("input");
-btnChangeName.value = "Change your name";
+btnChangeName.value = "Change";
 btnChangeName.type = "button";
 DesStyle.addClass(btnChangeName, "btnChangeName");
 DesTag.addToParent(btnChangeName, nameDiv);
@@ -174,6 +175,7 @@ DesStyle.addClass(contentBox1, "contentBox");
 let detailDiv = DesTag.createTag("div");
 DesTag.addToParent(detailDiv, contentBox1);
 DesStyle.addClass(detailDiv, "detailDiv");
+detailDiv.style.fontSize = "0.7em";
 
 //create opponent div for the details
 let playerDiv1 = DesTag.createTag("div");
