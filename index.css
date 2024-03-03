@@ -1,100 +1,251 @@
+
+
+
+
+
+
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.des-container {
+.container {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: #221144;
-    color: #88aaff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000022;
+}
+
+.container1 {
+    display: none;
+}
+
+.contentBox {
+    display: flex;
+    width: 95%;
+    height: 95%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000011;
+    color:#aaaaff;
     font-family: tahoma;
 }
 
-.des-box {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border: 2px solid black;
-    padding: 20px;
+.contentBox h1 {
+    font-family: Impact;
+    text-align: center;
+    font-size: 2.6em;
+    margin-bottom: 10px;
 }
 
-.des-box0 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.contentBox p {
     width: 80%;
-    border: 2px solid black;
+    font-family: tahoma;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
-.des-box1 {
+.nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 20%;
-    border: 2px solid black;
-    font-size: 0.5em;
+    margin-top: 20px;
 }
 
-.player {
-    display: flex;
-    width: 100%;
-    height: 25%;
+.nav a, .btnChallenge, .winnerModal input{
+    display: inline-block;
+    text-decoration: none;
     border: 2px solid black;
-}
-
-.table {
-    display: flex;
-    width: 100%;
-    height: 50%;
-    border: 2px solid black;
-    padding: 20px;
-}
-
-.table-card {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border: 2px solid black;
-}
-
-img {
-    width: 50px;
-    height: 100px;
-    margin: auto;
-    border: 4px solid white;
     border-radius: 10px;
-    gap: 5px;
-    transition: border 2s ease-in-out;
+    padding: 5px 10px 5px 10px;
+    background-color: #aaaaff;
+    color: #000022;
+    margin-left: 5px;
+    font-size: 1.4em;
+}
+
+.nav a:hover, .btnChallenge:hover, .winnerModal input:hover {
+    background-color: #000033;
+    color: #bbbbff;
+    cursor: pointer;
+}
+
+.nameDiv {
+    display: flex;
+    background-color: black;
+    padding: 10px;
+}
+
+.nameDiv label {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.nameDiv input {
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.btnChangeName {
+    background-color: #222;
+    color: aliceblue;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.opponentDiv {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.opponentDiv div {
+    display: flex;
+    width: 140px;
+    height: 120px;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    text-align: center;
+}
+
+.opponentDiv div:hover {
+
+    background-color: #aaaaff;
+    color: #000022;
+    cursor: pointer;
+}
+
+.opponentDiv img {
+    width: 100px;
+    height: 100px;
     
 }
 
-img:hover {
-    border: 4px solid green;
-    cursor: pointer;
-    width: 60px;
-    height: 120px;
+.opponentDiv h2 {
+    font-size: 0.9em;
+    
 }
 
-.playerh {
+.opponentDiv p {
+    font-size: 0.3em;
+}
+
+.btnChallenge {
+    padding: 5px;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.detailDiv {
     display: flex;
+    width: 100%;
+    height: 5%;
+    background-color: black;
+}
+
+.playerDiv {
+    display: flex;
+    width: 50%;
+    border: 2px solid white;
+}
+
+.playerDiv h3 {
+    color: #aaaaff;
+    margin-left: 10px;
+}
+
+.playerDeck {
+    display: flex;
+    width: 100%;
+    height: 28%;
+    align-items: center;
     overflow-x: scroll;
+}
+.fullTable {
+    display: flex;
+    width: 100%;
+    height: 39%;
+    background: url("./images/table.jpg");
+    background-size: cover;
+}
+
+.tableDeck {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.card {
+    width: 60px;
+    height: 120px;
+    border: 4px solid white;
+    border-radius: 5px;
+}
+
+.card:hover {
+    width: 70px;
+    height: 130px;
+    cursor: pointer;
 }
 
 .modal {
-    display: flex;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100vw;
     height: 100vh;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    background-color: rgba(0, 0, 0, 0.2);
-    color: blue;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+.modal h4 {
+    text-align: center;
+    font-size: 2em;
+    color: red;
+}
+
+.winnerModal {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.winnerModal img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+.winnerModal p {
+    font-size: 1.4em;
+    font-family: tahoma;
+    font-weight: bolder;
+    color:aliceblue;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/*-------------THEMES----------------*/
+
