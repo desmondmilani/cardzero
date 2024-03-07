@@ -58,7 +58,7 @@ message.innerText = welcomeText;
 DesTag.addToParent(message, contentBox);
 
 let message2 = DesTag.createTag("p");
-message2.innerText = "To win is to lose all cards, first play the cards from your left until their all out, then you can start using cards on the bottom screen.";
+message2.innerText = "To win is to lose all cards, first play the cards from your left until they are all out, then you can start using cards on the bottom screen.";
 DesTag.addToParent(message2, contentBox);
 
 let message3 = DesTag.createTag("p");
